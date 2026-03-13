@@ -41,5 +41,11 @@ jobs:
           echo "Building now..."  # 빌드 작업 안내 문구 화면 출력
           mkdir build             # build 이름의 디렉토리 생성
           cp mbti.json build/     # json 파일 build 디렉토리에 복사 -> 결과물 생성
+            # (빌드 작동x -> 테스트 작업에서 원하는 값이 나오지 않음)
 
+      # Test Process (테스트 작업)
+      - name: Test Process
+        run: |
+          echo "Testing now..."    # 테스트 작업 안내 문구 화면 출력
+          test -f build/mbti.json  # 테스트 실행
           
